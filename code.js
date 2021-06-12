@@ -34,13 +34,13 @@ function getData(){ //function definition for getData to retrieve data
 
 function playStation() { //define function playStation
     console.log("playstation() started"); //send to console that function has started
-    mySound = new sound("gir_doom_song.mp3"); //referencing the function to file
+    mySound = new sound("gir_doom_song.mp3"); //referencing the new copy of function to file gir_doom_song.mp3
     mySound.play(); //call play function within class of myplay which calls sound
 }
 
 function playOther() { //define function playOther
     console.log("playOther() started"); // send to console that function has started
-    mySound = new sound("Silly Fun.mp3"); //referencing the function to the file
+    mySound = new sound("Silly Fun.mp3"); //referencing the function to the file Silly Fun.mp3
     mySound.play(); //call play function now that all details are set.
 }
 
@@ -52,11 +52,11 @@ function sound(src) {    //define sound function with input parameter of src
     this.sound.style.display = "none"; //setting up display to show nothing
     document.body.appendChild(this.sound); //attach document to class
 
-    this.play = function () {
-        this.sound.play();
+    this.play = function () { //referencing sound function as element .play
+        this.sound.play(); //calling sound.play function
 
-        this.stop = function () {
-            this.sound.pause();
+        this.stop = function () { //referencing sound function as element .stop
+            this.sound.pause(); //calling sound.pause function
         }
     }
 }
@@ -151,7 +151,7 @@ class InputData { //class definition for InputData to hold data from dataLoader-
         this.cssSensor_temp = cssSensor_temp;
         this.cssSensor_eCO2 = cssSensor_eCO2;
         this.cssSensor_TVOC = cssSensor_TVOC;
-        this.UV = UV;
+        this.UV = UV; //UV is seen as a possible class due to capitalization, VScode has colored it as a result
         this.accelX = accelX;
         this.accelY = accelY;
         this.accelZ = accelZ;
@@ -165,5 +165,5 @@ class InputData { //class definition for InputData to hold data from dataLoader-
 
 
 
-    }
-}
+    } //end of substantiation block
+}//end of Class definition block
