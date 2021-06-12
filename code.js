@@ -58,6 +58,8 @@ function sound(src) {    //define sound function with input parameter of src
         this.stop = function () {
             this.sound.pause();
         }
+    }
+}
 
 
 
@@ -81,7 +83,7 @@ function sound(src) {    //define sound function with input parameter of src
 
         //function to play craps
 
-        function playCraps() {
+    function playCraps() {
             console.log("playCraps has started"); // Log to console the start of code
             var die1; //define variable as die1 for game
             die1 = Math.ceil(Math.random() * 6); //define die1 as the ceiling value of the random of 0-6
@@ -111,8 +113,7 @@ function sound(src) {    //define sound function with input parameter of src
         }
 
 
-    }
-}
+    
 
 class InputData { //class definition for InputData to hold data from dataLoader-1.js
     constructor(    //begin constructor of class elements
